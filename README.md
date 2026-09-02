@@ -122,5 +122,6 @@ The engagement demonstrates delivery of a complete commerce system: customer UX,
 Production source code is kept private due to client confidentiality and intellectual property requirements. This repository is a public showcase demonstrating the product, architecture, technical capabilities, and development approach.
 
 ---
+> Public portfolio case study by Ratovate Technologies.
 
 [Project overview](./PROJECT_OVERVIEW.md) · [Features](./FEATURES.md) · [Technical overview](./TECHNICAL_OVERVIEW.md) · [Architecture](./architecture/)

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Markettoo system architecture</title>
+  <desc id="desc">High-level architecture of the Markettoo marketplace: storefront and admin SPAs, Laravel REST API, data stores, and third-party integrations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="820" fill="url(#bg)"/>
+  <text x="40" y="48" fill="#f8fafc" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Markettoo  System Architecture</text>
+  <text x="40" y="74" fill="#94a3b8" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Multi-vendor marketplace · storefront, admin, seller operations, and POS</text>
+
+  <!-- Clients -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="100" width="1020" height="118" rx="14" fill="#111827" stroke="#334155"/>
+  </g>
+  <text x="60" y="128" fill="#38bdf8" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">CLIENTS</text>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="60" y="142" width="220" height="54" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+    <text x="170" y="174" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600">Shoppers</text>
+    <rect x="300" y="142" width="220" height="54" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+    <text x="410" y="174" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600">Sellers / Vendors</text>
+    <rect x="540" y="142" width="220" height="54" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+    <text x="650" y="174" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600">Platform Admins</text>
+    <rect x="780" y="142" width="256" height="54" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+    <text x="908" y="174" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600">In-store POS Staff</text>
+  </g>
+
+  <!-- Frontends -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="242" width="1020" height="118" rx="14" fill="#111827" stroke="#334155"/>
+  </g>
+  <text x="60" y="270" fill="#34d399" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">PRESENTATION</text>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="80" y="286" width="440" height="54" rx="10" fill="#064e3b" stroke="#34d399"/>
+    <text x="300" y="312" text-anchor="middle" fill="#ecfdf5" font-size="15" font-weight="600">Nuxt 3 Storefront SPA</text>
+    <text x="300" y="330" text-anchor="middle" fill="#a7f3d0" font-size="11">Catalog, cart, checkout, accounts, store pages</text>
+    <rect x="580" y="286" width="440" height="54" rx="10" fill="#064e3b" stroke="#34d399"/>
+    <text x="800" y="312" text-anchor="middle" fill="#ecfdf5" font-size="15" font-weight="600">Nuxt 3 Admin / Seller SPA</text>
+    <text x="800" y="330" text-anchor="middle" fill="#a7f3d0" font-size="11">Dashboard, catalog, orders, CMS, POS, payouts</text>
+  </g>
+
+  <!-- API -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="384" width="1020" height="168" rx="14" fill="#111827" stroke="#334155"/>
+  </g>
+  <text x="60" y="412" fill="#fbbf24" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">APPLICATION LAYER · LARAVEL 11 REST API</text>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="60" y="430" width="230" height="96" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="175" y="468" text-anchor="middle" fill="#fef3c7" font-size="14" font-weight="600">Auth &amp; Access Control</text>
+    <text x="175" y="488" text-anchor="middle" fill="#fde68a" font-size="11">OAuth tokens · RBAC</text>
+    <text x="175" y="506" text-anchor="middle" fill="#fde68a" font-size="11">Admin / seller / customer</text>
+    <rect x="310" y="430" width="230" height="96" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="425" y="468" text-anchor="middle" fill="#fef3c7" font-size="14" font-weight="600">Commerce Services</text>
+    <text x="425" y="488" text-anchor="middle" fill="#fde68a" font-size="11">Catalog · cart · orders</text>
+    <text x="425" y="506" text-anchor="middle" fill="#fde68a" font-size="11">Tax · shipping · promotions</text>
+    <rect x="560" y="430" width="230" height="96" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="675" y="468" text-anchor="middle" fill="#fef3c7" font-size="14" font-weight="600">Marketplace Ops</text>
+    <text x="675" y="488" text-anchor="middle" fill="#fde68a" font-size="11">Stores · commissions</text>
+    <text x="675" y="506" text-anchor="middle" fill="#fde68a" font-size="11">Withdrawals · POS</text>
+    <rect x="810" y="430" width="226" height="96" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="923" y="468" text-anchor="middle" fill="#fef3c7" font-size="14" font-weight="600">Content &amp; Media</text>
+    <text x="923" y="488" text-anchor="middle" fill="#fde68a" font-size="11">CMS · i18n · images</text>
+    <text x="923" y="506" text-anchor="middle" fill="#fde68a" font-size="11">Email notifications</text>
+  </g>
+
+  <!-- Data + integrations -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="576" width="500" height="204" rx="14" fill="#111827" stroke="#334155"/>
+  </g>
+  <text x="60" y="604" fill="#c084fc" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">DATA &amp; STORAGE</text>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="60" y="624" width="220" height="64" rx="10" fill="#3b0764" stroke="#c084fc"/>
+    <text x="170" y="662" text-anchor="middle" fill="#f3e8ff" font-size="14" font-weight="600">MySQL</text>
+    <rect x="300" y="624" width="220" height="64" rx="10" fill="#3b0764" stroke="#c084fc"/>
+    <text x="410" y="662" text-anchor="middle" fill="#f3e8ff" font-size="14" font-weight="600">File Storage</text>
+    <rect x="60" y="700" width="460" height="56" rx="10" fill="#3b0764" stroke="#c084fc"/>
+    <text x="290" y="724" text-anchor="middle" fill="#f3e8ff" font-size="13" font-weight="600">Local disk · Google Cloud Storage · CDN</text>
+    <text x="290" y="742" text-anchor="middle" fill="#e9d5ff" font-size="11">Product media, logos, documents</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="560" y="576" width="500" height="204" rx="14" fill="#111827" stroke="#334155"/>
+  </g>
+  <text x="580" y="604" fill="#fb7185" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">EXTERNAL INTEGRATIONS</text>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="580" y="624" width="220" height="64" rx="10" fill="#4c0519" stroke="#fb7185"/>
+    <text x="690" y="650" text-anchor="middle" fill="#ffe4e6" font-size="13" font-weight="600">Payments</text>
+    <text x="690" y="670" text-anchor="middle" fill="#fecdd3" font-size="10">Stripe · PayPal · Razorpay</text>
+    <rect x="820" y="624" width="220" height="64" rx="10" fill="#4c0519" stroke="#fb7185"/>
+    <text x="930" y="650" text-anchor="middle" fill="#ffe4e6" font-size="13" font-weight="600">Identity</text>
+    <text x="930" y="670" text-anchor="middle" fill="#fecdd3" font-size="10">Google · Facebook OAuth</text>
+    <rect x="580" y="700" width="220" height="56" rx="10" fill="#4c0519" stroke="#fb7185"/>
+    <text x="690" y="734" text-anchor="middle" fill="#ffe4e6" font-size="13" font-weight="600">Email / SMTP</text>
+    <rect x="820" y="700" width="220" height="56" rx="10" fill="#4c0519" stroke="#fb7185"/>
+    <text x="930" y="726" text-anchor="middle" fill="#ffe4e6" font-size="13" font-weight="600">Regional payments</text>
+    <text x="930" y="744" text-anchor="middle" fill="#fecdd3" font-size="10">Flutterwave · Iyzico · PayFast</text>
+  </g>
+</svg>
